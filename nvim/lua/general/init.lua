@@ -1,0 +1,6 @@
+require('general.variables')
+require('general.functions')
+require('general.commands')
+require('general.options')
+require('general.keymaps')
+require('general.reloads')
