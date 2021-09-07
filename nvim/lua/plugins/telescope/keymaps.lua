@@ -16,10 +16,10 @@ Keymap.g({
     #                                  LSP PICKERS                            #
     #-------------------------------------------------------------------------#
     --]]
-    { 'n', '<Leader>ga', [[<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>]], { noremap = true, silent = true } },
-    { 'n', '<Leader>gr', [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]], { noremap = true, silent = true } },
-    { 'n', '<Leader>gi', [[<cmd>lua require('telescope.builtin').lsp_implementations()<CR>]], { noremap = true, silent = true } },
-    { 'n', '<Leader>gd', [[<cmd>lua require('telescope.builtin').lsp_definitions()<CR>]], { noremap = true, silent = true } },
+    { 'n', 'ga', [[<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>]], { noremap = true, silent = true } },
+    { 'n', 'gr', [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]], { noremap = true, silent = true } },
+    { 'n', 'gi', [[<cmd>lua require('telescope.builtin').lsp_implementations()<CR>]], { noremap = true, silent = true } },
+    { 'n', 'gd', [[<cmd>lua require('telescope.builtin').lsp_definitions()<CR>]], { noremap = true, silent = true } },
     { 'n', '<Leader>o', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], { noremap = true, silent = true } },
     { 'n', '<Leader>s', [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>]], { noremap = true, silent = true } },
     { 'n', '<Leader>a', [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>]], { noremap = true, silent = true } },

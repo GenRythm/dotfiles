@@ -29,16 +29,18 @@ return require('packer').startup(function()
     use {'simrat39/rust-tools.nvim'}
 
     -- Completion framework
-    use {
-        "hrsh7th/nvim-cmp",
-        requires = {
-          "hrsh7th/vim-vsnip",
-          "hrsh7th/cmp-buffer",
-        }
-    }
-    use {'hrsh7th/cmp-nvim-lsp'}
-    use {'hrsh7th/cmp-path'}
-    use {'hrsh7th/cmp-vsnip'}
+    -- use {
+    --     "hrsh7th/nvim-cmp",
+    --     requires = {
+    --       "hrsh7th/vim-vsnip",
+    --       "hrsh7th/cmp-buffer",
+    --     }
+    -- }
+    -- use {'hrsh7th/cmp-nvim-lsp'}
+    -- use {'hrsh7th/cmp-path'}
+    -- use {'hrsh7th/cmp-vsnip'}
+    use { 'ms-jpq/coq_nvim', branch = 'coq'} -- main one
+    use { 'ms-jpq/coq.artifacts', branch= 'artifacts'} -- 9000+ Snippets
 
     -- syntax edition
     use {"blackCauldron7/surround.nvim",

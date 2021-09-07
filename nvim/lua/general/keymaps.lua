@@ -70,10 +70,10 @@ Keymap.g({
     { 'i', 'kj', '<esc>', { noremap = true } },
     { 't', 'kj', '<C-\\><C-n>', { noremap = true } },
 
-    { 'n', 'hh', '^', { noremap = true } },
-    { 'n', 'll', '$', { noremap = true } },
-    { 'v', 'hh', '^', { noremap = true } },
-    { 'v', 'll', '$', { noremap = true } },
+    -- { 'n', 'hh', '^', { noremap = true } },
+    -- { 'n', 'll', '$', { noremap = true } },
+    -- { 'v', 'hh', '^', { noremap = true } },
+    -- { 'v', 'll', '$', { noremap = true } },
 
     --[[
     #-------------------------------------------------------------------------#
@@ -100,7 +100,8 @@ Keymap.g({
     #                                MOVE LINE                                #
     #-------------------------------------------------------------------------#
     --]]
-    -- move selected line to up/down { 'v', 'J', [[<Cmd>m '>+1<CR>gv=gv]], { noremap = true } },
+    -- move selected line to up/down
+    -- { 'v', 'J', [[<Cmd>m '>+1<CR>gv=gv]], { noremap = true } },
     -- { 'v', 'K', [[<Cmd>m '<-2<CR>gv=gv]], { noremap = true } },
     -- { 'n', 'J', [[mzJ`z]], { noremap = true } },
 
@@ -175,4 +176,10 @@ Keymap.g({
     -- { 'n', '<Leader>vwm', '<Cmd>call ColorMyPencils()<CR>', { noremap = true, silent = true } },
     -- Surprize me!! (random theme pick)
     -- { 'n', '<Leader>sm', '<Cmd>call SurpriseMe()<CR>', { noremap = true, silent = true } },
+
+    { '', '<F3>', '<Cmd>bd!<CR>', {}},
+    { '', '<F4>', '<Cmd>%bd|e#<CR>', {}},
+    { '', '<F5>', '<Cmd>w | COQnow -s<CR>', {}},
+    { '', '<F12>', '<Cmd>%bd!|:q<CR>', {}},
+
 })

@@ -17,7 +17,7 @@ local colors = {
 require'lualine'.setup {
     options = {
         icons_enabled = true,
-        theme = 'gruvbox',
+        theme = 'ayu_mirage',
         component_separators = {'|', '|'},
         section_separators = {'', ''},
         disabled_filetypes = {}
@@ -27,13 +27,13 @@ require'lualine'.setup {
         lualine_b = {
             'branch',
             {
-              'diff',
-              colored = true, -- displays diff status in color if set to true
-              -- all colors are in format #rrggbb
-              color_added = colors.green,
-              color_modified = colors.yellow,
-              color_removed = colors.red,
-              symbols = {added = '+', modified = '~', removed = '-'} -- changes diff symbols
+                'diff',
+                colored = true, -- displays diff status in color if set to true
+                -- all colors are in format #rrggbb
+                color_added = colors.green,
+                color_modified = colors.yellow,
+                color_removed = colors.red,
+                symbols = {added = '+', modified = '~', removed = '-'} -- changes diff symbols
             }
         },
         lualine_c = {'filename'},

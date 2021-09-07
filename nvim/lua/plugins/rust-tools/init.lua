@@ -64,7 +64,7 @@ local opts = {
         }
     },
 
-    server = {} -- rust-analyer options
+    server = {require'coq'.lsp_ensure_capabilities()} -- rust-analyer options
 }
 
 require('rust-tools').setup(opts)
