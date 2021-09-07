@@ -8,16 +8,13 @@ end
 vim.cmd 'autocmd BufWritePost install-plugins.lua PackerCompile'
 
 return require('packer').startup(function()
+    -- use {'wbthomason/packer.nvim', opt = true}
 
-    use {'wbthomason/packer.nvim', opt = true}
-
-    -- theme, airline theme
+    -- theme, statusline, tabline
     use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
-    use {'folke/tokyonight.nvim'}
-    use {
-        'hoob3rt/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
+    use {'hoob3rt/lualine.nvim'}
+    use {'romgrk/barbar.nvim'}
+    use {'kyazdani42/nvim-web-devicons'}
 
     -- fuzzy finder
     use {'nvim-lua/popup.nvim'}
@@ -50,4 +47,5 @@ return require('packer').startup(function()
     }
     use {'b3nj5m1n/kommentary'}
 
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)

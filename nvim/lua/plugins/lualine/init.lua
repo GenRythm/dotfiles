@@ -42,8 +42,6 @@ require'lualine'.setup {
                 'diagnostics', 
                 sources = {'nvim_lsp'},
                 sections = {'error', 'warn', 'info', 'hint'},
-                symbols = {error = '🔥', warn = '⚡', info = '📗', hint = '🐬'},
-                --symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'},
                 color_error = colors.red,
                 color_warn = colors.yellow,
                 color_info = colors.green,
@@ -52,12 +50,9 @@ require'lualine'.setup {
             'encoding', 
             {
                 'fileformat', 
-                icons_enabled = false
             },
             {
                 'filetype',
-                icons_enabled = false,
-                colored = false
             },
         },
         lualine_y = {},
