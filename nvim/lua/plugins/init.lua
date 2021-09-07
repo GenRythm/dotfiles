@@ -1,5 +1,5 @@
 require('plugins.install-plugins')
-require('plugins.install-plugins-vimscript')
+-- require('plugins.install-plugins-vimscript')
 require('plugins.gruvbox')
 -- require('plugins.tokyonight')
 require('plugins.lualine')

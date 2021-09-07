@@ -21,6 +21,7 @@ Option.g({
     swapfile = false,
     tabstop = 4,
     shiftwidth = 4,
+    guifont = "Hack Nerd Font Mono:h12",
 
     --[[
     #-------------------------------------------------------------------------#
