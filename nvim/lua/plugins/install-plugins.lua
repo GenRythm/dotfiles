@@ -40,11 +40,7 @@ return require('packer').startup(function()
     use { 'ms-jpq/coq.artifacts', branch= 'artifacts'} -- 9000+ Snippets
 
     -- syntax edition
-    use {"blackCauldron7/surround.nvim",
-        config = function()
-            require "surround".setup {}
-        end
-    }
+    use 'tpope/vim-surround'
     use {'b3nj5m1n/kommentary'}
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
