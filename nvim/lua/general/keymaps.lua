@@ -154,6 +154,7 @@ Keymap.g({
     -- { 'n', 'ga', [[<cmd>lua vim.lsp.buf.code_action()<CR>]],        { noremap = true, silent = true } },
     { 'n', 'K',  [[<cmd>lua vim.lsp.buf.hover()<CR>]],              { noremap = true, silent = true } },
 
+
     --[[
     #-------------------------------------------------------------------------#
     #                                   DIAGNOSTICS                           #
@@ -161,6 +162,7 @@ Keymap.g({
     --]]
     { 'n', 'g[',  [[<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>]],  { noremap = true, silent = true } },
     { 'n', 'g]',  [[<cmd>lua vim.lsp.diagnostic.goto_next()<CR>]],  { noremap = true, silent = true } },
+    { 'n', '<Leader>e',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
 
 
     --[[
@@ -179,7 +181,7 @@ Keymap.g({
 
     { '', '<F3>', '<Cmd>bd!<CR>', {}},
     { '', '<F4>', '<Cmd>%bd|e#<CR>', {}},
-    { '', '<F5>', '<Cmd>w | COQnow -s<CR>', {}},
+    -- { '', '<F5>', '<Cmd>w | COQnow -s<CR>', {}},
     { '', '<F12>', '<Cmd>%bd!|:q<CR>', {}},
 
 })

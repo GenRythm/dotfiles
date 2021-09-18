@@ -17,7 +17,7 @@ local colors = {
 require'lualine'.setup {
     options = {
         icons_enabled = true,
-        theme = 'ayu_mirage',
+        theme = 'gruvbox',
         component_separators = {'|', '|'},
         section_separators = {'', ''},
         disabled_filetypes = {}
@@ -36,7 +36,12 @@ require'lualine'.setup {
                 symbols = {added = '+', modified = '~', removed = '-'} -- changes diff symbols
             }
         },
-        lualine_c = {'filename'},
+        lualine_c = {
+            {
+                'filename',
+                path = 1
+            }
+        },
         lualine_x = {
             {
                 'diagnostics', 
@@ -47,15 +52,15 @@ require'lualine'.setup {
                 color_info = colors.green,
                 color_hint = colors.cyan
             },
+        },
+        lualine_y = {
             'encoding', 
-            {
-                'fileformat', 
-            },
+            'fileformat', 
             {
                 'filetype',
+                colored = true
             },
         },
-        lualine_y = {},
         lualine_z = {'location'}
     },
     inactive_sections = {
@@ -67,12 +72,16 @@ require'lualine'.setup {
         lualine_z = {}
     },
     tabline = {
-      lualine_a = {},
-      lualine_b = {'filename'},
-      lualine_c = {},
-      lualine_x = {},
-      lualine_y = {},
-      lualine_z = {}
+        lualine_a = {},
+        lualine_b = {
+            -- 'filetype'
+            'filename'
+        },
+        lualine_c = {
+        },
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
     },
     extensions = {}
 }
