@@ -1,4 +1,5 @@
 -- Color table for highlights
+-- all colors are in format #rrggbb
 local colors = {
     bg = '#202328',
     fg = '#bbc2cf',
@@ -18,8 +19,10 @@ require'lualine'.setup {
     options = {
         icons_enabled = true,
         theme = 'gruvbox',
-        component_separators = {'|', '|'},
-        section_separators = {'', ''},
+        -- section_separators = { left = '', right = ''},
+        -- component_separators = { left = '', right = ''},
+        component_separators = { left = '|', right = '|'},
+        section_separators = { left = '', right = ''},
         disabled_filetypes = {}
     },
     sections = {
@@ -29,10 +32,11 @@ require'lualine'.setup {
             {
                 'diff',
                 colored = true, -- displays diff status in color if set to true
-                -- all colors are in format #rrggbb
-                color_added = colors.green,
-                color_modified = colors.yellow,
-                color_removed = colors.red,
+                diff_color = {
+                    added = { fg = colors.green },
+                    modified = { fg = color_modified },
+                    removed = { fg = color_removed },
+                },
                 symbols = {added = '+', modified = '~', removed = '-'} -- changes diff symbols
             }
         },
@@ -47,10 +51,12 @@ require'lualine'.setup {
                 'diagnostics', 
                 sources = {'nvim_lsp'},
                 sections = {'error', 'warn', 'info', 'hint'},
-                color_error = colors.red,
-                color_warn = colors.yellow,
-                color_info = colors.green,
-                color_hint = colors.cyan
+                diagnostics_color = {
+                    error = { fg = colors.red },
+                    warn = { fg = colors.yellow },
+                    info = { fg = colors.green },
+                    hint = { fg = colors.cyan },
+                }
             },
         },
         lualine_y = {
@@ -72,14 +78,16 @@ require'lualine'.setup {
         lualine_z = {}
     },
     tabline = {
-        lualine_a = {},
+        lualine_a = {
+        },
         lualine_b = {
-            -- 'filetype'
-            'filename'
         },
         lualine_c = {
+            require'tabline'.tabline_buffers
         },
-        lualine_x = {},
+        lualine_x = {
+            require'tabline'.tabline_tabs
+        },
         lualine_y = {},
         lualine_z = {}
     },
