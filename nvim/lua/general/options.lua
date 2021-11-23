@@ -23,6 +23,8 @@ Option.g({
     shiftwidth = 4,
     guifont = "Hack Nerd Font Mono:h12",
 
+    wrap = false,
+
     --[[
     #-------------------------------------------------------------------------#
     #                                    EDITOR                               #

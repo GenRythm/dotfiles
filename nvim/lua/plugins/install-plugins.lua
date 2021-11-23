@@ -12,7 +12,7 @@ return require('packer').startup(function()
 
     -- theme, statusline, tabline
     use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
-    use {'shadmansaleh/lualine.nvim'}
+    use {'nvim-lualine/lualine.nvim'}
     use {
         'kdheepak/tabline.nvim',
         config = function()
