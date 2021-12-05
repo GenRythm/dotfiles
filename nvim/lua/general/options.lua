@@ -21,7 +21,7 @@ Option.g({
     swapfile = false,
     tabstop = 4,
     shiftwidth = 4,
-    guifont = "Hack Nerd Font Mono:h12",
+    guifont = "JetBrainsMono Nerd Font:h12",
 
     wrap = false,
 
@@ -94,7 +94,7 @@ Option.g({
     -- assign unnamedplus register to clipboard
     -- anything in the clipboard can be pasted directly
     -- any yanked text will be copied to clipboard
-    -- clipboard='unnamedplus',
+    -- clipboard = 'unnamedplus'
 })
 
 
