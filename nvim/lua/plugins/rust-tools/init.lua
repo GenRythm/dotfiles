@@ -79,7 +79,10 @@ local opts = {
                     enable = true
                 },
                 diagnostics = {
-                    disabled = "unresolved-proc-macro"
+                    disabled = {
+                        "unresolved-proc-macro",
+                        "inactive-code"
+                    }
                 }
             }
         }

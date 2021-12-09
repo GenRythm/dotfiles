@@ -11,7 +11,7 @@ Option.g({
     cmdheight = 2,
     -- compatible = false,
     -- errorbells = false,
-    fileformat = "unix",
+    fileformats = "unix",
     list = true,
     listchars = "space:.,tab:>-",
     expandtab = true,
