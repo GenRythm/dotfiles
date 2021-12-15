@@ -22,7 +22,7 @@ Keymap.g({
     { 'n', 'gd', [[<cmd>lua require('telescope.builtin').lsp_definitions()<CR>]], { noremap = true, silent = true } },
     { 'n', '<Leader>o', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], { noremap = true, silent = true } },
     { 'n', '<Leader>s', [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>]], { noremap = true, silent = true } },
-    { 'n', '<Leader>a', [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>]], { noremap = true, silent = true } },
+    { 'n', '<Leader>a', [[<cmd>lua require('telescope.builtin').diagnostics()<CR>]], { noremap = true, silent = true } },
     -- { 'n', '<Leader>T.B.D', [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>]], { noremap = true, silent = true } },
     -- { 'n', '<Leader>T.B.D', [[<cmd>lua require('telescope.builtin').lsp_range_code_actions()<CR>]], { noremap = true, silent = true } },
     -- { 'n', '<Leader>T.B.D', [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<CR>]], { noremap = true, silent = true } },
