@@ -162,7 +162,8 @@ Keymap.g({
     --]]
     { 'n', 'g[',  [[<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>]],  { noremap = true, silent = true } },
     { 'n', 'g]',  [[<cmd>lua vim.lsp.diagnostic.goto_next()<CR>]],  { noremap = true, silent = true } },
-    { 'n', '<Leader>e',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
+    -- { 'n', '<Leader>e',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
+    { 'n', '<Tab>',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
 
 
     --[[
