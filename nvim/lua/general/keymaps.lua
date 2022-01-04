@@ -160,10 +160,12 @@ Keymap.g({
     #                                   DIAGNOSTICS                           #
     #-------------------------------------------------------------------------#
     --]]
-    { 'n', 'g[',  [[<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>]],  { noremap = true, silent = true } },
-    { 'n', 'g]',  [[<cmd>lua vim.lsp.diagnostic.goto_next()<CR>]],  { noremap = true, silent = true } },
+    { 'n', 'g[', [[<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>]],  { noremap = true, silent = true } },
+    { 'n', 'g]', [[<cmd>lua vim.lsp.diagnostic.goto_next()<CR>]],  { noremap = true, silent = true } },
     -- { 'n', '<Leader>e',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
-    { 'n', '<Tab>',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
+
+    -- Disable <Tab> jump forward
+    { 'n', '<Tab>', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>',  { noremap = true, silent = true } },
 
 
     --[[
@@ -182,7 +184,5 @@ Keymap.g({
 
     { '', '<F3>', '<Cmd>bd!<CR>', {}},
     { '', '<F4>', '<Cmd>%bd|e#<CR>', {}},
-    -- { '', '<F5>', '<Cmd>w | COQnow -s<CR>', {}},
     { '', '<F12>', '<Cmd>%bd!|:q<CR>', {}},
-
 })

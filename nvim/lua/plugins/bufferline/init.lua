@@ -2,10 +2,13 @@ require('bufferline').setup {
   options = {
     numbers =
         -- "none",
-        "ordinal",
+        -- "ordinal",
         -- "buffer_id",
         -- "both",
         -- function({ ordinal, id, lower, raise }): string,
+        function(opts)
+            return string.format('%s|%s', opts.id, opts.raise(opts.ordinal))
+        end,
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
     left_mouse_command = "buffer %d",    -- can be a string | function, see "Mouse actions"
@@ -80,15 +83,28 @@ require('bufferline').setup {
     enforce_regular_tabs = true,
     always_show_bufferline = true,
     sort_by =
-        -- 'id',
+        'id',
         -- 'extension',
         -- 'relative_directory',
         -- 'directory',
-        'tabs',
+        -- 'tabs',
         -- function(buffer_a, buffer_b)
         --   -- add custom logic
         --   return buffer_a.modified > buffer_b.modified
         -- end
+    custom_areas = {},
   }
 }
 
+Keymap.g({
+    { 'n', 'gb', '<Cmd>BufferLinePick<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>3', '<Cmd>BufferLineGoToBuffer 3<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>4', '<Cmd>BufferLineGoToBuffer 4<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>5', '<Cmd>BufferLineGoToBuffer 5<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>6', '<Cmd>BufferLineGoToBuffer 6<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>7', '<Cmd>BufferLineGoToBuffer 7<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>8', '<Cmd>BufferLineGoToBuffer 8<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>9', '<Cmd>BufferLineGoToBuffer 9<CR>', { noremap = true, silent = true } },
+})
