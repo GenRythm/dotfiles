@@ -5,7 +5,8 @@ Keymap.g({
     #-------------------------------------------------------------------------#
     --]]
     { 'n', '<Leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<CR>]],    { noremap = true } },
-    { 'n', '<Leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]],     { noremap = true } },
+    { 'n', '<Leader>fg', [[<cmd>lua require('telescope.builtin').git_files()<CR>]],     { noremap = true } },
+    { 'n', '<Leader>gr', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]],     { noremap = true } },
     { 'n', '<Leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<CR>]],       { noremap = true } },
     { 'n', '<Leader>fn', [[<cmd>lua require('telescope.builtin').file_browser()<CR>]],  { noremap = true } },
     { 'n', '<Leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]],     { noremap = true } },
