@@ -15,13 +15,15 @@ Keymap.g({
     #-------------------------------------------------------------------------#
     --]]
     -- [ space + h ] move cursor to left window
-    { 'n', '<Leader>h', '<Cmd>wincmd h<CR>', { noremap = true } },
+    -- { 'n', '<Leader>h', '<Cmd>wincmd h<CR>', { noremap = true } },
     -- [ space + l ] move cursor to bottom window
-    { 'n', '<Leader>j', '<Cmd>wincmd j<CR>', { noremap = true } },
+    -- { 'n', '<Leader>j', '<Cmd>wincmd j<CR>', { noremap = true } },
     -- [ space + j ] move cursor to top window
-    { 'n', '<Leader>k', '<Cmd>wincmd k<CR>', { noremap = true } },
+    -- { 'n', '<Leader>k', '<Cmd>wincmd k<CR>', { noremap = true } },
     -- [ space + k ] move cursor to right window
-    { 'n', '<Leader>l', '<Cmd>wincmd l<CR>', { noremap = true } },
+    -- { 'n', '<Leader>l', '<Cmd>wincmd l<CR>', { noremap = true } },
+
+    { 'n', '<C-p>', '<C-i>', { noremap = true } },
 
 
     --[[
@@ -162,10 +164,7 @@ Keymap.g({
     --]]
     { 'n', 'g[', [[<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>]],  { noremap = true, silent = true } },
     { 'n', 'g]', [[<cmd>lua vim.lsp.diagnostic.goto_next()<CR>]],  { noremap = true, silent = true } },
-    -- { 'n', '<Leader>e',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
-
-    -- Disable <Tab> jump forward
-    { 'n', '<Tab>', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>',  { noremap = true, silent = true } },
+    { 'n', 'ge',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
 
 
     --[[
