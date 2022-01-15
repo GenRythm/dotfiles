@@ -172,8 +172,8 @@ Keymap.g({
     #                                   OTHER                                 #
     #-------------------------------------------------------------------------#
     --]]
-    -- hit twice the spacebar if you want highlight to gone!
-    { 'n', '<Leader>', '<Cmd>nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true } },
+    -- remove highlight search!
+    { 'n', '<Tab>', '<Cmd>nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true } },
     -- ctrl-c
     -- { 'i', '<C-c>', '<esc>', { noremap = true } },
     -- Vim with me!! (customize theme with shortcut)

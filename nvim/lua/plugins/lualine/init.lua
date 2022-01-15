@@ -67,7 +67,10 @@ require'lualine'.setup {
                 colored = true
             },
         },
-        lualine_z = {'location'}
+        lualine_z = {
+            'location',
+            'progress'
+        }
     },
     inactive_sections = {
         lualine_a = {},

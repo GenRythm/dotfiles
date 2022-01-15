@@ -103,3 +103,4 @@ source $ZSH/oh-my-zsh.sh
 alias ll="ls -la"
 
 EDITOR=$(which nvim)
+export EDITOR
