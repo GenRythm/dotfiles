@@ -97,7 +97,7 @@ require('bufferline').setup {
 }
 
 Keymap.g({
-    { 'n', '<Space>t', '<Cmd>BufferLinePick<CR>', { noremap = true, silent = true } },
+    { 'n', '<Space><Space>', '<Cmd>BufferLinePick<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>1', '<Cmd>BufferLineGoToBuffer 1<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>2', '<Cmd>BufferLineGoToBuffer 2<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>3', '<Cmd>BufferLineGoToBuffer 3<CR>', { noremap = true, silent = true } },
@@ -109,6 +109,6 @@ Keymap.g({
     { 'n', '<Space>9', '<Cmd>BufferLineGoToBuffer 9<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>j', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>k', '<Cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true } },
-    { 'n', '<Space>l', '<Cmd>BufferLineMoveNext<CR>', { noremap = true, silent = true } },
-    { 'n', '<Space>h', '<Cmd>BufferLineMovePrev<CR>', { noremap = true, silent = true } },
+    { 'n', '<Space><Tab>l', '<Cmd>BufferLineMoveNext<CR>', { noremap = true, silent = true } },
+    { 'n', '<Space><Tab>h', '<Cmd>BufferLineMovePrev<CR>', { noremap = true, silent = true } },
 })

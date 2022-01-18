@@ -8,7 +8,7 @@ end
 vim.cmd 'autocmd BufWritePost install-plugins.lua PackerCompile'
 
 return require('packer').startup(function()
-    -- use {'wbthomason/packer.nvim', opt = true}
+    use {'wbthomason/packer.nvim', opt = true}
 
     -- theme, statusline, tabline
     use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}

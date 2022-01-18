@@ -104,3 +104,7 @@ alias ll="ls -la"
 
 EDITOR=$(which nvim)
 export EDITOR
+
+. "$HOME/.cargo/env"
+
+alias neovide="neovide --maximized"
