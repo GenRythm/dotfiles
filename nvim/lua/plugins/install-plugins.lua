@@ -49,4 +49,6 @@ return require('packer').startup(function()
 
     -- solidity. Waiting for treesitter support
     use {'tomlion/vim-solidity'}
+
+    use {'ggandor/lightspeed.nvim'}
 end)

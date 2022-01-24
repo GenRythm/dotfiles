@@ -56,6 +56,8 @@ Keymap.g({
     { 'v', '<Leader>s', '"_s', { noremap = true } },
     { 'v', '<Leader>S', '"_S', { noremap = true } },
 
+    { 'c', '<Leader>p', '<C-r>+', { noremap = true } },
+
     -- yank all the content of file to global register ?? (╯°□°）╯︵ ┻━┻
     -- { 'n', '<Leader>Y', 'gg"+yG', { noremap = true } },
 
@@ -164,7 +166,7 @@ Keymap.g({
     --]]
     { 'n', 'g[', [[<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>]],  { noremap = true, silent = true } },
     { 'n', 'g]', [[<cmd>lua vim.lsp.diagnostic.goto_next()<CR>]],  { noremap = true, silent = true } },
-    { 'n', 'ge',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
+    { 'n', 'di',  [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]],  { noremap = true, silent = true } },
 
 
     --[[
