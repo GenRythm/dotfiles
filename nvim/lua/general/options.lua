@@ -46,10 +46,10 @@ Option.g({
     -- on	     on		delete old backup, backup current file
     backup = false,
     writebackup = true,
-    
+
     -- write changes to swap file after "n" ms
     updatetime = 300,
-    
+
     -- controls how short messages are displayed in status bar section
     shortmess = vim.o.shortmess .. 'c',
 
@@ -118,7 +118,7 @@ Option.w({
     -- usually it adds new column when signs, moving buffer to right side.
     -- adding a column create weird effect that's little bit hard for the eye
     signcolumn = 'yes',
-    
+
     -- vim try to keep 100 lines below and above when scrolling
     -- if buffer cannot display more than 200 lines, cursor will stay in center
     -- and scroll the buffer
