@@ -19,13 +19,13 @@ fi
 if [ ! -h $HOME/.tmux.conf ]
 then
     echo "[tmux] creating config link..."
-    ln -s $HOME/workplace/projects/dotfiles/tmux/.tmux.conf $HOME/
+    ln -s $HOME/workplace/projects/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 else
     echo "[tmux] config already existed"
 fi
 
 rm $HOME/.zshrc
-ln -s $HOME/workplace/projects/dotfiles/zsh/.zshrc $HOME/
+ln -s $HOME/workplace/projects/dotfiles/zsh/zshrc $HOME/.zshrc
 
 if [ ! -h $HOME/.oh-my-zsh/themes/genrythm.zsh-theme ]
 then
