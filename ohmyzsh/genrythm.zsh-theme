@@ -17,7 +17,7 @@
 #ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
 #ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$fg[red]%}
 
-PROMPT='%{$fg_bold[green]%}╭─%{$fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green]%}%m%{$fg_bold[green]%} %{$fg[yellow]%}%~ $(git_prompt_info)
+PROMPT='%{$fg_bold[green]%}╭─%{$fg_bold[green]%}%n%{$fg[magenta]%}@%{$fg_bold[green]%}%m%{$fg_bold[green]%} %{$fg[yellow]%}%~ $(git_prompt_info)
 %{$fg[green]%}╰> %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}[%{$fg[cyan]%} "

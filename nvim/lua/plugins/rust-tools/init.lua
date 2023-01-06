@@ -1,7 +1,12 @@
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 local opts = {
     tools = {
         autoSetHints = true,
-        hover_with_actions = true,
+        -- hover_with_actions = true,
 
         runnables = {
             -- whether to use telescope for selection menu or not
@@ -16,6 +21,7 @@ local opts = {
         -- These apply to the default RustSetInlayHints command
         inlay_hints = {
             -- only_current_line_autocmd = "CursorHold",
+            only_current_line = false,
             show_parameter_hints = false,
             parameter_hints_prefix = "",
             other_hints_prefix = "ᐅ ",
@@ -30,6 +36,10 @@ local opts = {
 
             -- The color of the hints
             -- highlight = "Comment",
+            -- highlight = "NonText",
+            -- highlight = "InlayHints",
+
+            enabled = {"ChainingHint"}
         },
 
         hover_actions = {
@@ -48,32 +58,44 @@ local opts = {
 
         -- settings for showing the crate graph based on graphviz and the dot
         -- command
-        crate_graph = {
-            -- Backend used for displaying the graph
-            -- see: https://graphviz.org/docs/outputs/
-            -- default: x11
-            backend = "x11",
-            -- where to store the output, nil for no output stored (relative
-            -- path from pwd)
-            -- default: nil
-            output = nil,
-            -- true for all crates.io and external crates, false only the local
-            -- crates
-            -- default: true
-            full = true,
-        }
+        -- crate_graph = {
+        --     -- Backend used for displaying the graph
+        --     -- see: https://graphviz.org/docs/outputs/
+        --     -- default: x11
+        --     backend = "x11",
+        --     -- where to store the output, nil for no output stored (relative
+        --     -- path from pwd)
+        --     -- default: nil
+        --     output = nil,
+        --     -- true for all crates.io and external crates, false only the local
+        --     -- crates
+        --     -- default: true
+        --     full = true,
+        -- }
     },
 
     server = {
         -- on_attach is a callback called when the language server attachs to the buffer
         -- on_attach = on_attach,
+        capabilities = capabilities,
         settings = {
             -- to enable rust-analyzer settings visit:
             -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
             ["rust-analyzer"] = {
                 -- enable clippy on save
+                cargo = {
+                    loadOutDirsFromCheck = true
+                },
+                completion = {
+                    autoimport = {
+                        enable = true,
+                    },
+                    postfix = {
+                        enable = true,
+                    },
+                },
                 checkOnSave = {
-                    command = "clippy"
+                    command = "check"
                 },
                 procMacro = {
                     enable = true
@@ -83,6 +105,9 @@ local opts = {
                         "unresolved-proc-macro",
                         "inactive-code"
                     }
+                },
+                inlayHints = {
+                    maxLength = 40
                 }
             }
         }

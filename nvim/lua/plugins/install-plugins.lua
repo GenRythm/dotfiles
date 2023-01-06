@@ -11,7 +11,10 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim', opt = true}
 
     -- theme, statusline, tabline
-    use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+    use {'ellisonleao/gruvbox.nvim'}
+    -- use {'folke/tokyonight.nvim'}
+    -- use {'glepnir/zephyr-nvim'}
+
     use {'nvim-lualine/lualine.nvim'}
     use {'akinsho/bufferline.nvim'}
     use {'kyazdani42/nvim-web-devicons'}
@@ -28,16 +31,20 @@ return require('packer').startup(function()
     use {'simrat39/rust-tools.nvim'}
 
     -- Completion framework
-    use {
-        "hrsh7th/nvim-cmp",
-        requires = {
-          "hrsh7th/vim-vsnip",
-          "hrsh7th/cmp-buffer",
-        }
-    }
+    use {'hrsh7th/nvim-cmp'}
     use {'hrsh7th/cmp-nvim-lsp'}
+    use {'hrsh7th/cmp-buffer'}
     use {'hrsh7th/cmp-path'}
-    use {'hrsh7th/cmp-vsnip'}
+    use {'hrsh7th/cmp-cmdline'}
+
+    -- For vsnip users.
+    -- use {'hrsh7th/vim-vsnip'}
+    -- use {'hrsh7th/cmp-vsnip'}
+
+    -- For luasnip users.
+    use {'L3MON4D3/LuaSnip'}
+    use {'saadparwaiz1/cmp_luasnip'}
+
     -- use { 'ms-jpq/coq_nvim', branch = 'coq'} -- main one
     -- use { 'ms-jpq/coq.artifacts', branch= 'artifacts'} -- 9000+ Snippets
 
@@ -51,4 +58,7 @@ return require('packer').startup(function()
     use {'tomlion/vim-solidity'}
 
     use {'ggandor/lightspeed.nvim'}
+
+    -- File explorer
+    use {'nvim-tree/nvim-tree.lua'}
 end)
