@@ -100,12 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll="ls -la"
+alias ll="ls -laF"
 
-EDITOR=$(which nvim)
-export EDITOR
+# EDITOR=$(which nvim)
+# export EDITOR
+# . "$HOME/.cargo/env"
 
-. "$HOME/.cargo/env"
-
-alias neovide="neovide --maximized"
-alias tmux="TERM=screen-256color-bce tmux"
+# alias neovide="neovide --maximized"
+# alias tmux="TERM=screen-256color-bce tmux"

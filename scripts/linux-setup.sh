@@ -25,7 +25,7 @@ else
 fi
 
 rm $HOME/.zshrc
-ln -s $HOME/workplace/projects/dotfiles/zsh/zshrc $HOME/.zshrc
+ln -s $HOME/workplace/projects/dotfiles/zsh/.zshrc $HOME/.zshrc
 
 if [ ! -h $HOME/.oh-my-zsh/themes/genrythm.zsh-theme ]
 then
