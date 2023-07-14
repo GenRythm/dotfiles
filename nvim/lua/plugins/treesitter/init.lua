@@ -1,19 +1,22 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {
-        "rust",
-        "c",
-        "cpp",
-        "bash",
-        "cmake",
-        "dockerfile",
-        "javascript",
-        "json",
-        "python",
-        "toml",
-        "glsl",
-        "yaml",
-        "solidity"
-    },
+    -- ensure_installed = {
+    --     "rust",
+    --     "c",
+    --     "cpp",
+    --     "bash",
+    --     "cmake",
+    --     "diff",
+    --     "dockerfile",
+    --     "gitignore",
+    --     "gitcommit",
+    --     "javascript",
+    --     "json",
+    --     "python",
+    --     "toml",
+    --     "glsl",
+    --     "yaml",
+    --     "solidity"
+    -- },
     highlight = {
         enable = true,              -- false will disable the whole extension
 
