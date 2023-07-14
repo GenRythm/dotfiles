@@ -55,7 +55,10 @@ return require('packer').startup(function()
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- solidity. Waiting for treesitter support
-    use {'tomlion/vim-solidity'}
+    -- use {'tomlion/vim-solidity'}
+
+    -- yul
+    use { 'mattdf/vim-yul' }
 
     use {'ggandor/lightspeed.nvim'}
 
