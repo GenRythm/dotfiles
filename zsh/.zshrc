@@ -106,5 +106,5 @@ alias ll="ls -laF"
 # export EDITOR
 # . "$HOME/.cargo/env"
 
-# alias neovide="neovide --maximized"
-# alias tmux="TERM=screen-256color-bce tmux"
+alias neovide="neovide --maximized"
+alias tmux="TERM=screen-256color-bce tmux"

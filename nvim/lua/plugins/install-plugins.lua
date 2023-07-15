@@ -56,24 +56,6 @@ return require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',
         run = function()
             local ts_update = require('nvim-treesitter.install').update({
-                languages = {
-                    "rust",
-                    "c",
-                    "cpp",
-                    "bash",
-                    "cmake",
-                    "diff",
-                    "dockerfile",
-                    "gitignore",
-                    "gitcommit",
-                    "javascript",
-                    "json",
-                    "python",
-                    "toml",
-                    "glsl",
-                    "yaml",
-                    "solidity"
-                },
                 with_sync = true
             })
             ts_update()

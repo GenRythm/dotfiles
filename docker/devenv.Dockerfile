@@ -37,7 +37,22 @@ RUN rm nvim.appimage
 RUN mkdir /root/.config
 COPY nvim /root/.config/nvim
 RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-RUN nvim --headless +TSUpdateSync +qa
+RUN nvim --headless -c "TSInstallSync c" -cq
+RUN nvim --headless -c "TSInstallSync cpp" -cq
+RUN nvim --headless -c "TSInstallSync rust" -cq
+RUN nvim --headless -c "TSInstallSync bash" -cq
+RUN nvim --headless -c "TSInstallSync cmake" -cq
+RUN nvim --headless -c "TSInstallSync diff" -cq
+RUN nvim --headless -c "TSInstallSync dockerfile" -cq
+RUN nvim --headless -c "TSInstallSync gitignore" -cq
+RUN nvim --headless -c "TSInstallSync gitcommit" -cq
+RUN nvim --headless -c "TSInstallSync javascript" -cq
+RUN nvim --headless -c "TSInstallSync json" -cq
+RUN nvim --headless -c "TSInstallSync python" -cq
+RUN nvim --headless -c "TSInstallSync toml" -cq
+RUN nvim --headless -c "TSInstallSync yaml" -cq
+RUN nvim --headless -c "TSInstallSync glsl" -cq
+RUN nvim --headless -c "TSInstallSync solidity" -cq
 
 CMD ["/bin/zsh"]
 
