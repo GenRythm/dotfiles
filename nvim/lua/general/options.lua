@@ -25,6 +25,8 @@ Option.g({
 
     wrap = false,
 
+    shell="/bin/zsh",
+
     --[[
     #-------------------------------------------------------------------------#
     #                                    EDITOR                               #
@@ -39,11 +41,11 @@ Option.g({
     -- enable mouse in vim. 'a' for all modes (normal, visual, insert & command)
     --mouse = 'a',
 
-    -- 'backup' 'writebackup'	action	~
-    -- off	     off	no backup made
-    -- off	     on		backup current file, deleted afterwards (default)
-    -- on	     off	delete old backup, backup current file
-    -- on	     on		delete old backup, backup current file
+    -- 'backup' 'writebackup'   action  ~
+    -- off       off    no backup made
+    -- off       on     backup current file, deleted afterwards (default)
+    -- on        off    delete old backup, backup current file
+    -- on        on     delete old backup, backup current file
     backup = false,
     writebackup = true,
 

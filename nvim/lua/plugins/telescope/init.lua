@@ -3,6 +3,7 @@ require('telescope').setup{
     defaults = {
         vimgrep_arguments = {
             'rg',
+            '-L',
             -- '--ignore',
             -- '--hidden',
             '--color=never',
@@ -52,6 +53,11 @@ require('telescope').setup{
             override_file_sorter = true,     -- override the file sorter
             case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                              -- the default case_mode is "smart_case"
+        }
+    },
+    pickers = {
+        find_files = {
+            follow = true
         }
     }
 }

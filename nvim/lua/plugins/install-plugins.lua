@@ -62,9 +62,6 @@ return require('packer').startup(function()
         end,
     }
 
-    -- solidity. Waiting for treesitter support
-    -- use {'tomlion/vim-solidity'}
-
     -- yul
     use { 'mattdf/vim-yul' }
 

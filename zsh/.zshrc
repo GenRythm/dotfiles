@@ -108,3 +108,6 @@ alias ll="ls -laF"
 
 alias neovide="neovide --maximized"
 alias tmux="TERM=screen-256color-bce tmux"
+
+DISABLE_AUTO_UPDATE=true
+

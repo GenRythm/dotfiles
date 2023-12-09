@@ -94,8 +94,12 @@ local opts = {
                         enable = true,
                     },
                 },
+                check = {
+                    allTargets = false,
+                },
                 checkOnSave = {
-                    command = "check"
+                    command = "check",
+                    allTargets = false
                 },
                 procMacro = {
                     enable = true
