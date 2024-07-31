@@ -5,4 +5,6 @@ require('utils')
 require('general')
 
 -- vim plugins settings
-require('plugins')
+-- require('plugins')
+
+require("config.lazy")

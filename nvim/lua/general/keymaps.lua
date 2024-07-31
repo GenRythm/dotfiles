@@ -156,7 +156,7 @@ Keymap.g({
     -- { 'n', 'gi', [[<cmd>lua vim.lsp.buf.implementation()<CR>]],     { noremap = true, silent = true } },
     -- { 'n', 'gr', [[<cmd>lua vim.lsp.buf.references()<CR>]],         { noremap = true, silent = true } },
     -- { 'n', 'ga', [[<cmd>lua vim.lsp.buf.code_action()<CR>]],        { noremap = true, silent = true } },
-    { 'n', 'K',  [[<cmd>lua vim.lsp.buf.hover()<CR>]],              { noremap = true, silent = true } },
+    -- { 'n', 'K',  [[<cmd>lua vim.lsp.buf.hover()<CR>]],              { noremap = true, silent = true } },
 
 
     --[[

@@ -74,7 +74,7 @@ ZSH_THEME="genrythm"
 plugins=(
     git
     # zsh-autosuggestions
-    zsh-syntax-highlighting
+    # zsh-syntax-highlighting
     # zsh-autocomplete
 )
 

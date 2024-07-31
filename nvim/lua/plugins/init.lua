@@ -1,14 +1,9 @@
-require('plugins.install-plugins')
-require('plugins.gruvbox')
--- require('plugins.tokyonight')
--- require('plugins.zephyr-nvim')
-require('plugins.lualine')
-require('plugins.indent-blankline')
-require('plugins.telescope')
--- require('plugins.nvim-lspconfig')
-require('plugins.rust-tools')
-require('plugins.nvim-cmp')
-require('plugins.nerdcommenter')
-require('plugins.treesitter')
-require('plugins.bufferline')
-require('plugins.nvim-tree')
+return {
+    { "nvim-tree/nvim-web-devicons", lazy = true },
+    {
+        'mattdf/vim-yul',
+        config = function()
+        end,
+        opts = {}
+    },
+}

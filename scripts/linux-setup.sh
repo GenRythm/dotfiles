@@ -1,16 +1,33 @@
 #!/bin/zsh
 
-# sudo apt update && sudo apt upgrade -y
-# sudo apt install -y curl \
-#      gnupg ca-certificates git \
-#      gcc-multilib g++-multilib cmake libssl-dev pkg-config \
-#      libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
-#      libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
-#      llvm clang build-essential
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y \
+     curl \
+#      gnupg \
+#      ca-certificates \
+     git \
+#      gcc-multilib \
+#      g++-multilib \
+#      cmake \
+     libssl-dev \
+     pkg-config \
+#      libfreetype6-dev \
+#      libasound2-dev \
+#      libexpat1-dev \
+#      libxcb-composite0-dev \
+#      libbz2-dev \
+#      libsndio-dev \
+#      freeglut3-dev \
+#      libxmu-dev \
+#      libxi-dev \
+#      libfontconfig1-dev \
+#      llvm \
+     clang \
+     build-essential
 
 # for Fedora
-sudo dnf install -y \
-    pkgconfig openssl-devel clang
+# sudo dnf install -y \
+#     pkgconfig openssl-devel clang
 
 if [ ! -h $HOME/.config/nvim ]
 then

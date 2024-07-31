@@ -28,3 +28,4 @@ fun! TrimWhitespace()
 endfun
 ]], true)
 
+vim.lsp.inlay_hint.enable()

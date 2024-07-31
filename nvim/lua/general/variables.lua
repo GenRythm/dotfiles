@@ -20,33 +20,30 @@ Variable.g({
 --     python3_host_prog = tostring(os.getenv("HOME")) .. '/.asdf/shims/python',
 -- })
 
-if vim.fn.hostname() == "devenv" then
-    local channel_id = vim.v.event.chan
-
-    vim.g.clipboard = {
-        name = 'neovide',
-        copy = {
-            ['+'] = function(lines, regtype)
-                vim.rpcnotify({channel_id}, 'neovide.set_clipboard', lines, regtype, '+')
-            end,
-            ['*'] = function(lines, regtype)
-                vim.rpcnotify({channel_id}, 'neovide.set_clipboard', lines, regtype, '*')
-            end,
-        },
-        paste = {
-            ['+'] = function()
-                return vim.rpcrequest({channel_id}, 'neovide.get_clipboard', '+')
-            end,
-            ['*'] = function()
-                return vim.rpcrequest({channel_id}, 'neovide.get_clipboard', '*')
-            end,
-        },
-        cache_enabled = 0
-    }
-
-    if vim.g.loaded_clipboard_provider then
-        vim.g.loaded_clipboard_provider = nil
-        vim.api.nvim_cmd( { cmd = 'runtime', args = { 'autoload/provider/clipboard.vim' } }, {} )
-    end
-end
+-- local channel_id = vim.v.event.chan
+-- vim.g.clipboard = {
+--     name = 'neovide',
+--     copy = {
+--         ['+'] = function(lines, regtype)
+--             vim.rpcnotify({channel_id}, 'neovide.set_clipboard', lines, regtype, '+')
+--         end,
+--         ['*'] = function(lines, regtype)
+--             vim.rpcnotify({channel_id}, 'neovide.set_clipboard', lines, regtype, '*')
+--         end,
+--     },
+--     paste = {
+--         ['+'] = function()
+--             return vim.rpcrequest({channel_id}, 'neovide.get_clipboard', '+')
+--         end,
+--         ['*'] = function()
+--             return vim.rpcrequest({channel_id}, 'neovide.get_clipboard', '*')
+--         end,
+--     },
+--     cache_enabled = 0
+-- }
+--
+-- if vim.g.loaded_clipboard_provider then
+--     vim.g.loaded_clipboard_provider = nil
+--     vim.api.nvim_cmd( { cmd = 'runtime', args = { 'autoload/provider/clipboard.vim' } }, {} )
+-- end
 
