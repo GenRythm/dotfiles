@@ -112,7 +112,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 . "$HOME/.cargo/env"
 
-alias tmux="TERM=xterm-256color tmux"
+# alias tmux="ANTONY"
 
 DISABLE_AUTO_UPDATE=true
 
@@ -123,3 +123,8 @@ zstyle ':completion:*' menu select
 bindkey -v
 export KEYTIMEOUT=1
 
+export LIBTORCH=/opt/torch/libtorch/lib
+# LIBTORCH_INCLUDE must contain `include` directory.
+export LIBTORCH_INCLUDE=/opt/torch/libtorch/
+# LIBTORCH_LIB must contain `lib` directory.
+export LIBTORCH_LIB=/opt/torch/libtorch/

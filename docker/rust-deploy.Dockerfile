@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM ubuntu:noble
 
 RUN apt update && apt install -y libssl3 ca-certificates
 RUN rm -rf /var/lib/apt/lists/*

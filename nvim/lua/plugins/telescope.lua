@@ -33,7 +33,7 @@ Keymap.g({
 
 return {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.8',
+    -- tag = '0.1.8',
     config = function()
         require('telescope').setup{
             defaults = {

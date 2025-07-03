@@ -9,8 +9,8 @@ Keymap.g({
     { 'n', '<Space>7', '<Cmd>BufferLineGoToBuffer 7<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>8', '<Cmd>BufferLineGoToBuffer 8<CR>', { noremap = true, silent = true } },
     { 'n', '<Space>9', '<Cmd>BufferLineGoToBuffer 9<CR>', { noremap = true, silent = true } },
-    { 'n', '<Space>j', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true } },
-    { 'n', '<Space>k', '<Cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true } },
+    { 'n', '<Space>h', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true } },
+    { 'n', '<Space>l', '<Cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true } },
     { 'n', '<Space><Tab>l', '<Cmd>BufferLineMoveNext<CR>', { noremap = true, silent = true } },
     { 'n', '<Space><Tab>h', '<Cmd>BufferLineMovePrev<CR>', { noremap = true, silent = true } },
 })
